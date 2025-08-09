@@ -49,7 +49,7 @@ def predict_spam(message):
 def home():
     return render_template('index.html')
 
-@app.route('/predict', methods=['GET', 'POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
         input_sms = request.form['message']
